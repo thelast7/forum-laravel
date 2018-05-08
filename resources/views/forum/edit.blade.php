@@ -7,7 +7,7 @@
 @if(auth()->user()->id == $forum->user_id)
 <div class="row">
 	<div class="col-md-8">
-		<form action="{{ route('forum.update', $forum->id) }}" method="post" role="form">
+		<form action="{{ route('forum.update', $forum->slug) }}" method="post" role="form">
 			{{ csrf_field() }}
 			{{ method_field('put') }}
 			<div class="well">

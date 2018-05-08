@@ -52,10 +52,10 @@
 
 	<div class="col-md-4">
 		@if(auth()->user()->id == $forum->user_id)
-		<a href="{{ route('forum.edit', $forum->id) }}" class="btn btn-success btn-block">Edit</a>
+		<a href="{{ route('forum.edit', $forum->slug) }}" class="btn btn-success btn-block">Edit</a>
 		<br>
 
-		<form action="{{ route('forum.destroy', $forum->id) }}" method="post">
+		<form action="{{ route('forum.destroy', $forum->slug) }}" method="post">
 			{{ csrf_field() }}
 			{{ method_field('delete') }}
 			<input type="submit" value="Delete" class="btn btn-block btn-danger">

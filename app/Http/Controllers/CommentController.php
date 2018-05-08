@@ -19,6 +19,6 @@ class CommentController extends Controller
 
     	$forum->comments()->save($comment);
 
-    	return redirect()->route('forum.show', $forum->id)->withMessage('Komentar berhasil ditambahkan');
+    	return redirect()->route('forum.show', $forum->slug)->withMessage('Komentar berhasil ditambahkan');
     }
 }
